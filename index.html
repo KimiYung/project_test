@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Music jay</title>
+    <link rel="stylesheet" href="css.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="navbar">
+        <div class="logo">GAaMa</div>
+        <ul>
+          <li><a href="#">HOME</a></li>
+          <li><a href="#">ABOUT</a></li>
+          <li><a href="#">SPECIFCATIONS</a></li>
+          <li><a href="#">PRODUCTS</a></li>
+          <li><a href="#">CONNECT</a></li>
+        </ul>
+      </div>
+      <div class="content">
+        <div class="left-col">
+          <h1>
+            THE <br />
+            REAL <br />
+            SOUND
+          </h1>
+        </div>
+
+        <div class="right-col">
+          <p>Click Here To Listen</p>
+          <div class="player"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <audio id="mySong">
+    <source src="images/甜甜的.mp3" type="audio/mp3" />
+  </audio>
+
+  <script>
+    var mySong = document.getElementById("mySong");
+    var player = document.querySelector(".player");
+    player.onclick = function () {
+      if (mySong.paused) {
+        mySong.play();
+        player.style.backgroundImage = "url(images/stop.png)";
+      } else {
+        mySong.pause();
+        player.style.backgroundImage = "url(images/player.png)";
+      }
+    };
+  </script>
+</html>
